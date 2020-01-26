@@ -1,0 +1,53 @@
+body{
+    margin: 0 auto;
+    height: 100vh;
+}
+.grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1.2fr 1.5fr;
+    grid-template-rows: 1fr 4fr 3fr 2fr;
+    grid-template-areas: 
+        "main   main   header"
+        "main   main   candy"
+        "nom    yum    candy"
+        "footer footer candy"
+    ;
+    height: 100vh;
+    margin:2em
+}
+main{
+    grid-area:main;
+    background-color: rgb(255, 248, 224);
+}
+section.nom{
+    grid-area:nom;
+    background-color: #c4b35a;
+}
+section.yum{
+    grid-area:yum;
+    background-color: #333333;
+}
+section.diabe{
+    grid-area:footer;
+    background-color: #202020;
+}
+header{
+    grid-area:header;
+}
+div.candy{
+    grid-area:candy;
+    background: url('/assets/back.jpg') no-repeat;
+    background-size: cover;
+}
+nav li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    float:left;
+    margin:1em;
+    padding: 0;
+    color: #333333;
+    font-size: 1.2em;
+    font-family: 'Open Sans', sans-serif;
+}
